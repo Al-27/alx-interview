@@ -6,7 +6,7 @@ def pascal_triangle(n):
     pascal = []
     if n <= 0:
         return pascal
-    n = 5
+    
     for row in range(1,n+1):
         i = []
         for col in range(1,row+1):
