@@ -24,7 +24,7 @@ def minOperations(n: int) -> int:
     """
     base = getPrimeN(n)
 
-    if n <= 0 or math.isinf(n):
+    if n <= 1 or math.isinf(n):
         return 0
     elif base == n:
         return n
