@@ -40,16 +40,3 @@ def minOperations(n: int) -> int:
     
     return ops+1
     
-    
-
-n = 11
-print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
-n = 5
-print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
-n = 6
-print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
-n = 7
-print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
-
-n = 36
-print("Min # of operations to reach {} char: {}".format(n, minOperations(n)))
