@@ -5,9 +5,9 @@ import math
 
 def clear_list(list: list, base: int) -> list:
     """
-    @new_list the new list which will contain factors 
+    @new_list the new list which will contain factors
                 that are divisible by @base
-    @appended is used to ignore the next two factors 
+    @appended is used to ignore the next two factors
                 that are divisible by @base to reduce 
                 number of ops required to reach @n
     """
@@ -54,10 +54,10 @@ def minOperations(n: int) -> int:
     ops = base
     chars = base
 
-    while chars != n :
+    while chars != n:
         ops += 1
         chars += base
-        if len(base_list) >= 1 :
+        if len(base_list) >= 1:
             if base_list[0] < chars:
                 base_list.pop(0)
             elif base_list[0] == chars:
