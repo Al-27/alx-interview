@@ -23,16 +23,16 @@ def clear_list(list: list, base: int) -> list:
     return new_list
 
 
-def getPrimeN(n: int) -> list:
+def getFactorN(n: int) -> list:
     """
         Return the smallest factor number @p
         if @n has no factor return @n
     """
-    primes = []
-    for p in range(3, n):
-        if n % p == 0:
-            primes.append(p)
-    return primes if len(primes) > 0 else [n]
+    factors = []
+    for f in range(3, n):
+        if n % f == 0:
+            factors.append(p)
+    return factors if len(factors) > 0 else [n]
 
 
 def minOperations(n: int) -> int:
@@ -42,7 +42,7 @@ def minOperations(n: int) -> int:
             to @chars to reach @n
         @ops number of operations done
     """
-    base_list = getPrimeN(n)
+    base_list = getFactorN(n)
     base = base_list.pop(0)
     base_list = clear_list(base_list, base)
 
