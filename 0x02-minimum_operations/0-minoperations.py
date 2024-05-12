@@ -5,8 +5,11 @@ import math
 
 def clear_list(list: list, base: int) -> list:
     """
-    @new_list the new list which will contain factors that are divisible by @base
-    @appended is used to ignore the next two factors that are divisible by @base to reduce number of ops required to reach @n
+    @new_list the new list which will contain factors 
+                that are divisible by @base
+    @appended is used to ignore the next two factors 
+                that are divisible by @base to reduce 
+                number of ops required to reach @n
     """
     new_list = []
     appended = 0
@@ -18,6 +21,7 @@ def clear_list(list: list, base: int) -> list:
             else:
                 appended -= 1
     return new_list
+
 
 def getPrimeN(n: int) -> list:
     """
@@ -50,7 +54,7 @@ def minOperations(n: int) -> int:
     ops = base
     chars = base
 
-    while chars != n:
+    while chars != n :
         ops += 1
         chars += base
         if len(base_list) >= 1 :
