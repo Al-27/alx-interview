@@ -31,7 +31,7 @@ def getFactorN(n: int) -> list:
     factors = []
     for f in range(3, n):
         if n % f == 0:
-            factors.append(p)
+            factors.append(f)
     return factors if len(factors) > 0 else [n]
 
 
