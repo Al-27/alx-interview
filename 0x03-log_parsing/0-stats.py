@@ -29,8 +29,7 @@ for code in [200, 301, 400, 401, 403, 404, 405, 500]:
 lines_processed = 0
 for line in fileinput.input():
     pattern = re.compile(
-        r'^(\d+\.){3}\d+ - \[(\d+-){2}\d+ (\d+:){2}\d+.\d+\]\
-        "GET \/projects\/260 HTTP\/1\.1" (\d+) (\d+)$')
+        r'^(\d+\.){3}\d+ - \[(\d+-){2}\d+ (\d+:){2}\d+.\d+\] "GET \/projects\/260 HTTP\/1\.1" (\d+) (\d+)$')
 
     if (pattern.findall(line)):
         match = [g for g in pattern.findall(line)[0]]
