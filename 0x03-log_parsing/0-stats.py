@@ -34,7 +34,7 @@ total_size = 0
 
 def print_stats():
     print(f"File size: {total_size}")
-    for k, v in status_codes.pairs():
+    for k, v in status_codes.items():
         if v != 0:
             print(f"{k}: {v}")
 
