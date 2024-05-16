@@ -64,7 +64,7 @@ for line in fileinput.input():
         status_codes[match[0]] += 1
     else:
         i = 0
-    total_size += match[i]
+    total_size += int(match[i])
     lines_processed += 1
 
     if (lines_processed % 10 == 0):
