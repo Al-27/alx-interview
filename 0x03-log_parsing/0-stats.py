@@ -33,21 +33,19 @@ for line in fileinput.input():
 
     if (pattern.findall(line)):
         match = [g for g in pattern.findall(line)[0]]
-    else:
-        continue
-    # match 0 -> Status Code
-    # match 1 -> File Size
-    for i in range(3):
-        match.pop(0)
-
-    i = 1
-    if (len(match) == 2):
-        status_codes[match[0]] += 1
-    else:
-        i = 0
-    total_size += int(match[i])
-    lines_processed += 1
-
-    if (lines_processed % 10 == 0):
-        print_stats()
+        # match 0 -> Status Code
+        # match 1 -> File Size
+        for i in range(3):
+            match.pop(0)
+    
+        i = 1
+        if (len(match) == 2):
+            status_codes[match[0]] += 1
+        else:
+            i = 0
+        total_size += int(match[i])
+        lines_processed += 1
+    
+        if (lines_processed % 10 == 0):
+            print_stats()
 print_stats()
