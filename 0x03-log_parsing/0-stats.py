@@ -29,7 +29,8 @@ for code in [200, 301, 400, 401, 403, 404, 405, 500]:
 lines_processed = 0
 for line in fileinput.input():
     pattern = re.compile(
-        r'^(\d+\.){3}\d+ - \[(\d+-){2}\d+ (\d+:){2}\d+.\d+\] "GET \/projects\/260 HTTP\/1\.1" (\d+) (\d+)$')
+        r'^(\d+\.){3}\d+ - \[(\d+-){2}\d+ (\d+:){2}\d+.\d+\]\
+        "GET \/projects\/260 HTTP\/1\.1" (\d+) (\d+)$')
 
     if (pattern.findall(line)):
         match = [g for g in pattern.findall(line)[0]]
@@ -37,7 +38,7 @@ for line in fileinput.input():
         # match 1 -> File Size
         for i in range(3):
             match.pop(0)
-    
+
         i = 1
         if (len(match) == 2):
             status_codes[match[0]] += 1
@@ -45,7 +46,7 @@ for line in fileinput.input():
             i = 0
         total_size += int(match[i])
         lines_processed += 1
-    
+
         if (lines_processed % 10 == 0):
             print_stats()
 print_stats()
