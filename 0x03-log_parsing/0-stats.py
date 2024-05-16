@@ -45,7 +45,7 @@ signal.signal(signal.SIGINT, ctrl_c)
 for code in [200, 301, 400, 401, 403, 404, 405, 500]:
     status_codes.update({str(code): 0})
 
-lines_processed = 0
+lines_processed = 1
 for line in fileinput.input():
     pattern = re.compile(
         r'^(\d+\.){3}\d+ - \[(\d+-){2}\d+ (\d+:){2}\d+.\d+\] "GET \/projects\/260 HTTP\/1\.1" (\d+) (\d+)$')
