@@ -8,8 +8,9 @@ def validUTF8(data):
         return chardet.detect(
             bytearray(data, "utf-8"))['encoding'] in ("utf-8", "ascii")
     try:
-        return chardet.detect(bytearray(data))['encoding'] in ("utf-8", "ascii")
+        return chardet.detect(
+            bytearray(data))['encoding'] in ("utf-8", "ascii")
     except:
-        return True
+        return False
 if __name__ == "__main__":
     print(validUTF8("wxcdsfvds"))
