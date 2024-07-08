@@ -40,7 +40,6 @@ def nqueens(n):
 
 if __name__ == "__main__":
     code = 0
-    nqueens(6)
     if len(argv) != 2:
         code = 1
         print("Usage: nqueens n")
