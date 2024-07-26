@@ -26,7 +26,7 @@ def makeChange(coins, total):
         if total < coin:
             i += 1
             continue
-        rcoins = total / coin
+        rcoins = int(total / coin)
         total = total - (rcoins * coin)
         coins_req += rcoins
     if coins_req == 0 or total != 0:
