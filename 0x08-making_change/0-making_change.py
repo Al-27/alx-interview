@@ -4,6 +4,9 @@ Main file for testing
 """
 
 
+import timeit
+
+
 def makeChange(coins, total):
     """mkCH
     """
@@ -23,9 +26,9 @@ def makeChange(coins, total):
         if total < coin:
             i += 1
             continue
-
-        total = total - coin
-        coins_req += 1
+        rcoins = total / coin
+        total = total - (rcoins * coin)
+        coins_req += rcoins
     if coins_req == 0 or total != 0:
         return -1
     return coins_req
