@@ -17,6 +17,8 @@ def makeChange(coins, total):
     coins_req = 0
     i = 0
     while (total != 0):
+        if i >= len(coins):
+            break
         coin = coins[i]
         if total < coin:
             i += 1
@@ -24,4 +26,6 @@ def makeChange(coins, total):
 
         total = total - coin
         coins_req += 1
+    if coins_req == 0:
+        return -1
     return coins_req
