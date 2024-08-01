@@ -13,7 +13,7 @@ def island_perimeter(grid):
     for Y in range(0, MAX_Y):
         for X in range(0, MAX_X):
             x1 = X + 1
-            y1 = Y + 1
+            y1 = 0 if Y + 1 >= MAX_Y else Y + 1
             if (x1 < MAX_X):
                 if (grid[Y][x1] != grid[Y][X]):
                     perim += 1
