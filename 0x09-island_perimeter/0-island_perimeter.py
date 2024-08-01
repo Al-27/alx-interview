@@ -5,6 +5,8 @@
 
 
 def island_perimeter(grid):
+    """Doc
+    """
     perim = 0
     MAX_X, MAX_Y = len(grid[0]), len(grid)
 
