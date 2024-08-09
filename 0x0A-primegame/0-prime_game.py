@@ -22,22 +22,28 @@ def isWinner(x, nums):
     score = 0
 
     for r in range(x):
+        print()
         score_r = 0  # same as @score but per round
         # 1 Ben's turn, 0 Maria's turn
         turn = False
 
-        if abs(score) > x / 2:
-            break
         if nums[r] == 1:
             score += 1
             continue
-        for n in range(2, nums[r] + 1):
+        for n in range(nums[r], 0, -1):
+            if n == 1:
+                if turn:
+                    score_r -= 1
+                else:
+                    score_r += 1
+                break
             if isPrime(n):
                 if turn:
                     score_r += 1
                 else:
                     score_r -= 1
                 turn = not turn
+
         if score_r > 0:
             score += 1
         elif score_r < 0:
