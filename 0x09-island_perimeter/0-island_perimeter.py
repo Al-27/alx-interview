@@ -17,7 +17,7 @@ def island_perimeter(grid):
             if grid[Y][X] == 1:
                 if (X == 0 or X == MAX_X - 1) and (Y == 0 or Y == MAX_Y - 1):
                     perim += 2
-                elif X == 0 or Y == 0 or X == MAX_X-1 or Y == MAX_Y - 1:
+                elif X == 0 or Y == 0 or X == MAX_X - 1 or Y == MAX_Y - 1:
                     perim += 1
             if (x1 < MAX_X):
                 if (grid[Y][x1] != grid[Y][X]):

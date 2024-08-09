@@ -3,6 +3,7 @@
 Rotate 2D Matrix
 """
 
+
 def rotate_2d_matrix(matrix):
     """"
 y   =  1 2 3
@@ -14,7 +15,7 @@ then:
         9 . 3
     """
     result = []
-    for y in range(len(matrix)-1,-1,-1):
+    for y in range(len(matrix) - 1, -1, -1):
         for x in range(len(matrix)):
             if len(result) < len(matrix):
                 result.append([matrix[y][x]])

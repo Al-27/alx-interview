@@ -16,5 +16,6 @@ def canUnlockAll(boxes):
                     b_unopened.update([i])
     return len(b_keys & b_unopened) == len(b_unopened)
 
+
 if __name__ == "__main__":
     canUnlockAll([[1], [0]])
