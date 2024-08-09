@@ -25,6 +25,9 @@ def isWinner(x, nums):
         score_r = 0  # same as @score but per round
         # 1 Ben's turn, 0 Maria's turn
         turn = False
+
+        if abs(score) > x / 2:
+            break
         if nums[r] == 1:
             score += 1
             continue
@@ -37,9 +40,12 @@ def isWinner(x, nums):
                 turn = not turn
         if score_r > 0:
             score += 1
-        else:
+        elif score < 0:
             score -= 1
 
     if score == 0:
         return None
     return "Ben" if score > 0 else "Maria"
+
+
+print("Winner: {}".format(isWinner(6, [1, 1, 0, 0, 1, 8])))
