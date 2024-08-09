@@ -40,7 +40,7 @@ def isWinner(x, nums):
                 turn = not turn
         if score_r > 0:
             score += 1
-        elif score < 0:
+        elif score_r < 0:
             score -= 1
 
     if score == 0:
