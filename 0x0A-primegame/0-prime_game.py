@@ -46,6 +46,3 @@ def isWinner(x, nums):
     if score == 0:
         return None
     return "Ben" if score > 0 else "Maria"
-
-
-print("Winner: {}".format(isWinner(6, [1, 1, 0, 0, 1, 8])))
