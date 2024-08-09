@@ -22,7 +22,6 @@ def isWinner(x, nums):
     score = 0
 
     for r in range(x):
-        print()
         score_r = 0  # same as @score but per round
         # 1 Ben's turn, 0 Maria's turn
         turn = False
