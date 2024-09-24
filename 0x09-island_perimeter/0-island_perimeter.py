@@ -33,15 +33,20 @@ def island_perimeter(grid):
 
                 for _x in x:
                     if _x >= MAX_X:
-                        _x = 0
+                        #beyond the grid lies water
+                        perim += 1
+                        continue
                     elif _x < 0:
-                        _x = MAX_X - 1
+                        perim += 1
+                        continue
                     perim += island_border(grid, _x, y[0], borders)
                 for _y in y:
                     if _y >= MAX_Y:
-                        _y = 0
+                        perim += 1
+                        continue
                     elif _y < 0:
-                        _y = MAX_Y - 1
+                        perim += 1
+                        continue
                     perim += island_border(grid, x[0], _y, borders)
 
     return perim
