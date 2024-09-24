@@ -27,18 +27,19 @@ def island_perimeter(grid):
         for X in range(0, MAX_X):
             if grid[Y][X] == 1:
                 x, y = X, Y
+
                 x = [x, x + 1, x - 1]
                 y = [y, y + 1, y - 1]
 
                 for _x in x:
                     if _x >= MAX_X:
-                        _x = -1
+                        _x = 0
                     elif _x < 0:
                         _x = MAX_X - 1
                     perim += island_border(grid, _x, y[0], borders)
                 for _y in y:
                     if _y >= MAX_Y:
-                        _y = -1
+                        _y = 0
                     elif _y < 0:
                         _y = MAX_Y - 1
                     perim += island_border(grid, x[0], _y, borders)
