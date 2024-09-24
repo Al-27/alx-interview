@@ -33,7 +33,7 @@ def island_perimeter(grid):
 
                 for _x in x:
                     if _x >= MAX_X:
-                        #beyond the grid lies water
+                        # beyond the grid, there lies water
                         perim += 1
                         continue
                     elif _x < 0:
