@@ -49,5 +49,5 @@ def isWinner(x, nums):
             score -= 1
 
     if score == 0:
-        return None
+        return "draw"
     return "Ben" if score > 0 else "Maria"
