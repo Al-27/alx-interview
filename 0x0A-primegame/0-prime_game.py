@@ -50,9 +50,9 @@ def isWinner(x, nums):
                     score_r += 1
                 break
             if turn:
-                score_r += 1
-            else:
                 score_r -= 1
+            else:
+                score_r += 1
             turn = not turn
 
         if score_r > 0:
