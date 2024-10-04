@@ -7,7 +7,7 @@ DOC
 def primeit():
     # given that n can be <= 10000, we go overboard and prepare a list
     # of primes
-    primes = []
+    primes = [1]
     for n in range(1, 10000):
         divided = 0
         for d in range(1, n):
@@ -39,9 +39,8 @@ def isWinner(x, nums):
             primes = primeit()
 
         # we extract primal number within nums[r] by intersecting the sets
-        round_set = range(nums[r], 0, -1)
-        round_set = list(set(primes) & set(round_set))
-
+        round_set = list(range(nums[r], 0, -1))
+        round_set = list(set(primes) & set(round_set))[:-1]
         for n in round_set:
             if n == 1:
                 if turn:
@@ -50,9 +49,9 @@ def isWinner(x, nums):
                     score_r += 1
                 break
             if turn:
-                score_r -= 1
-            else:
                 score_r += 1
+            else:
+                score_r -= 1
             turn = not turn
 
         if score_r > 0:
