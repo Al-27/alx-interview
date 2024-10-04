@@ -41,6 +41,12 @@ def isWinner(x, nums):
         # we extract primal number within nums[r] by intersecting the sets
         round_set = list(range(nums[r], 0, -1))
         round_set = list(set(primes) & set(round_set))[::-1]
+        
+        if len(round_set) % 2 == 0:
+            score -= 1
+        else :
+            score += 1
+        """
         for n in round_set:
             if n == 1:
                 if turn:
@@ -58,7 +64,7 @@ def isWinner(x, nums):
             score += 1
         elif score_r < 0:
             score -= 1
-
+        """
     if score == 0:
         return None
     return "Ben" if score > 0 else "Maria"
