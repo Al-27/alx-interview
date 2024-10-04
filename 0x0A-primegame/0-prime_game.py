@@ -3,11 +3,10 @@
 DOC
 """
 
-# given that n can be <= 10000, we go overboard and prepare the a primes list
-import timeit
-
 
 def primeit():
+    # given that n can be <= 10000, we go overboard and prepare a list
+    # of primes
     primes = []
     for n in range(1, 10000):
         divided = 0
